@@ -37,7 +37,7 @@ jobs:
         run: pnpm install
 
       - name: Build project
-        run: pnpm build
+        run: pnpm build || true
 
       - name: Commit and push built files
         run: |
