@@ -43,6 +43,10 @@ jobs:
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add dist -f
-          git commit -m "chore: auto-sync and build output" || echo "No changes"
-          git push origin main
+          if [ -d dist ]; then
+            git add dist -f
+            git commit -m "chore: auto-sync and build output" || echo "No changes"
+            git push origin main
+          else
+            echo "No dist directory to add."
+          fi
