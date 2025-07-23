@@ -1,0 +1,40 @@
+export function getTimeOrderIndex(arr: any, value: any, cadence?: number): any;
+export function getMonthNameByOrder(arrList: any, orderNumber: any, capitalize?: boolean, nameType?: string): any;
+export function canSelectDate(date: any, minDate: any, maxDate: any, mode?: string): boolean;
+export function canSelectTime(hourOrMinuteValue: any, minDate: any, maxDate: any, selectedDay: any, selectedMonth: any, selectedYear: any, timeUnit: any, selectedHours: any, selectedMinutes: any, timeOnly: any): boolean;
+export function getSurroundingHours(arr: any, centerValue: any, isMobileScreen: any): any[];
+export function getSurroundingMinutes(arr: any, selectedId: any, isMobileScreen: any): any[];
+export function checkForSpecialDate(dayToCheck: any, datesArr: any): any;
+export function getDaysInMonthGrid(date: any, firstDayOfWeek: any): any[][];
+export function getMonthGrid(pickerType: any, mode: any, currentYear: any, rowLgth: any, localListArr: any, isMobileScreen: any): any[][][];
+export function getGrid(type: any, rowLgth: any, startYr: any, endYr: any): any[][] | {
+    year: any;
+    items: string[];
+}[];
+export function getMonths(currentDate: any, variant: any, mode: any, pickerType: any, isMobileScreen: any): any[][];
+export function isQuarterValid(quarterObject: any, minDateRef: any, maxDateRef: any): boolean;
+export function formatInputRawDate(mask: any, newValue: any): any;
+export function formatInputRawDateTime(mask: any, newValue: any): any;
+export function formatInputRawTime(mask: any, newValue: any): any;
+export function extractMonthFromDate(dateObj: any): string;
+export function extractYearFromDate(dateObj: any): string;
+export function extractYearMonthFromDate(dateObj: any, mask: any): string;
+export function extractQuarterFromDate(dateObj: any, mask: any): string;
+export function dateFromYearAndQuarter(year: any, quarter: any): Date;
+export function quarterFromMonth(month: any): number;
+export function getQuarterStringFromDate(date: any): string;
+export function findDecadeStartYear(year: any): number;
+export function isStartOrEndYear(year: any, startYear: any, endYear: any): boolean;
+export function zeroPad(value: any): any;
+export function isSameDay(d1: any, d2: any): boolean;
+export function isSameMonth(d1: any, d2: any): boolean;
+export function isSameYear(d1: any, d2: any): boolean;
+export function hasSpecialDates(day: any, specialDatesArr: any): any;
+export namespace vDateMask {
+    function mounted(el: any, binding: any): void;
+    function updated(el: any, binding: any): void;
+}
+export function getDayTabIndex(date: any, month: any, weekIndex: any, firstDayOfTheWeek: any, monthsList: any, variant: any, pickerType: any, minDateRef: any, maxDateRef: any): "0" | "-1";
+export function removeLastNonAlphanumeric(input: any): any;
+export function validateDateByMask(date: any, mask: any): boolean;
+export function sanitizeDateInput(e: any, mode: any): void;

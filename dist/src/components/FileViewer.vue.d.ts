@@ -1,0 +1,37 @@
+import { DefineComponent, ComponentOptionsMixin, PublicProps, ComponentProvideOptions } from 'vue';
+declare const _default: DefineComponent<{}, {
+    setDownloadInProgress: typeof setDownloadInProgress;
+    $emit: (event: "download", ...args: any[]) => void;
+    texts: Record<string, any>;
+    id: string;
+    width: string;
+    height: string;
+    stickyHeader: boolean;
+    scrollable: boolean;
+    showPrintButton: boolean;
+    showFullScreenButton: boolean;
+    primaryDownloadButton: boolean;
+    downloadType: string;
+    preloadLibs: unknown[];
+    modelValue?: string;
+    fileName?: string;
+    zoomLevel?: number;
+    $props: {
+        readonly texts?: Record<string, any>;
+        readonly id?: string;
+        readonly width?: string;
+        readonly height?: string;
+        readonly stickyHeader?: boolean;
+        readonly scrollable?: boolean;
+        readonly showPrintButton?: boolean;
+        readonly showFullScreenButton?: boolean;
+        readonly primaryDownloadButton?: boolean;
+        readonly downloadType?: string;
+        readonly preloadLibs?: unknown[];
+        readonly modelValue?: string;
+        readonly fileName?: string;
+        readonly zoomLevel?: number;
+    };
+}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, any>;
+export default _default;
+declare function setDownloadInProgress(value: any): void;

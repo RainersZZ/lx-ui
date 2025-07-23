@@ -1,0 +1,31 @@
+import { DefineComponent, ComponentOptionsMixin, PublicProps, ComponentProvideOptions } from 'vue';
+declare const _default: DefineComponent<{}, {
+    $emit: (event: "emit" | "update:modelValue" | "rowActionClick", ...args: any[]) => void;
+    texts: Record<string, any>;
+    readOnly: boolean;
+    orderedObject: Record<string, any>;
+    name?: string;
+    id?: string;
+    modelValue?: Record<string, any>;
+    row?: Record<string, any>;
+    schema?: Record<string, any>;
+    validations?: Record<string, any>;
+    displaySchema?: Record<string, any>;
+    vv?: Record<string, any>;
+    parentName?: string;
+    $props: {
+        readonly texts?: Record<string, any>;
+        readonly readOnly?: boolean;
+        readonly orderedObject?: Record<string, any>;
+        readonly name?: string;
+        readonly id?: string;
+        readonly modelValue?: Record<string, any>;
+        readonly row?: Record<string, any>;
+        readonly schema?: Record<string, any>;
+        readonly validations?: Record<string, any>;
+        readonly displaySchema?: Record<string, any>;
+        readonly vv?: Record<string, any>;
+        readonly parentName?: string;
+    };
+}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, any>;
+export default _default;

@@ -1,0 +1,33 @@
+import { DefineComponent, ComponentOptionsMixin, PublicProps, ComponentProvideOptions } from 'vue';
+declare const _default: DefineComponent<{}, {
+    $emit: (event: "downloadFile" | "openModal" | "removeFile", ...args: any[]) => void;
+    texts: Record<string, any>;
+    disabled: boolean;
+    mode: string;
+    loading: boolean;
+    busy: boolean;
+    readOnly: boolean;
+    customItem: Record<string, any>;
+    hasDownloadButton: boolean;
+    showMeta: boolean;
+    defaultIcon: string;
+    isUploading: boolean;
+    additionalIconAndType?: unknown[];
+    imagePreview?: string;
+    $props: {
+        readonly texts?: Record<string, any>;
+        readonly disabled?: boolean;
+        readonly mode?: string;
+        readonly loading?: boolean;
+        readonly busy?: boolean;
+        readonly readOnly?: boolean;
+        readonly customItem?: Record<string, any>;
+        readonly hasDownloadButton?: boolean;
+        readonly showMeta?: boolean;
+        readonly defaultIcon?: string;
+        readonly isUploading?: boolean;
+        readonly additionalIconAndType?: unknown[];
+        readonly imagePreview?: string;
+    };
+}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, any>;
+export default _default;

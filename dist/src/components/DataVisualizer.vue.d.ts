@@ -1,0 +1,35 @@
+import { DefineComponent, ComponentOptionsMixin, PublicProps, ComponentProvideOptions } from 'vue';
+declare const _default: DefineComponent<{}, {
+    $emit: (event: "click", ...args: any[]) => void;
+    texts: Record<string, any>;
+    mode: string;
+    id: string;
+    kind: string;
+    idAttribute: string;
+    nameAttribute: string;
+    items: unknown[];
+    thresholds: unknown[];
+    showValues: string;
+    colorAttribute: string;
+    valueAttribute: string;
+    showLegend: boolean;
+    targets: unknown[];
+    maxValue?: number;
+    $props: {
+        readonly texts?: Record<string, any>;
+        readonly mode?: string;
+        readonly id?: string;
+        readonly kind?: string;
+        readonly idAttribute?: string;
+        readonly nameAttribute?: string;
+        readonly items?: unknown[];
+        readonly thresholds?: unknown[];
+        readonly showValues?: string;
+        readonly colorAttribute?: string;
+        readonly valueAttribute?: string;
+        readonly showLegend?: boolean;
+        readonly targets?: unknown[];
+        readonly maxValue?: number;
+    };
+}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, any>;
+export default _default;
