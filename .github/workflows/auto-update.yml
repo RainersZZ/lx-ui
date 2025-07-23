@@ -27,11 +27,14 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
+      - name: Install pnpm
+        run: npm install -g pnpm
 
-      - name: Build (optional)
-        run: npm run build
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm run build
 
       - name: Commit and push changes
         run: |
