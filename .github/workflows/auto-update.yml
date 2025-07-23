@@ -13,7 +13,7 @@ jobs:
       - name: Checkout your fork
         uses: actions/checkout@v4
         with:
-          persist-credentials: true  # allows pushing back
+          persist-credentials: true
           fetch-depth: 0
 
       - name: Add upstream remote
@@ -25,7 +25,7 @@ jobs:
       - name: Set up Node.js and pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 10.7.0
 
       - name: Install Node.js
         uses: actions/setup-node@v4
@@ -33,20 +33,18 @@ jobs:
           node-version: 22
           cache: 'pnpm'
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Install dependencies (try frozen first)
+        run: |
+          pnpm install --frozen-lockfile || pnpm install --no-frozen-lockfile
 
       - name: Build project
-        run: pnpm build || true
+        run: pnpm build
 
-      - name: Commit and push built files
+      - name: Commit and push built files, lockfile, and changes
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          if [ -d dist ]; then
-            git add dist -f
-            git commit -m "chore: auto-sync and build output" || echo "No changes"
-            git push origin main
-          else
-            echo "No dist directory to add."
-          fi
+          git add dist -f || true
+          git add pnpm-lock.yaml || true
+          git commit -m "chore: auto-sync, build output, update lockfile" || echo "No changes"
+          git push origin main
